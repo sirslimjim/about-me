@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-content: center;
+  background-color: turquoise;
+}
+
+#aboutmebody {
+  display: flex;
+  flex-direction: row;
+  background-color: dodgerblue;
+  height: 250px;
+  width: 500px;
+  align-content: center;
+  justify-content: center;
+}
+
+#title {
+  display: flex;
+  background-color: red;
+  align-content: center;
+  justify-content: center;
+}

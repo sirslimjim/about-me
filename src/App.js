@@ -1,11 +1,52 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import HomePage from "./components/HomePage/HomePage.js";
+import WorkHistoryComponent from "./components/WorkHistory/WorkHistory.js";
+
+function Index() {
+  return (
+    <div id="homepagerender">
+      <HomePage />
+    </div>
+  );
+}
+function WorkHistory() {
+  return (
+    <div id="workhistorypagerender">
+      <WorkHistoryComponent />
+    </div>
+  );
+}
+
+function AppRouter() {
+  return (
+    <Router>
+      <div>
+        <header>
+          <nav id="routerlinks">
+            <div>
+              {" "}
+              <Link to="/">Home</Link>
+            </div>
+
+            <div>
+              {" "}
+              <Link to="/work-history/">Work History</Link>
+            </div>
+          </nav>
+        </header>
+        <Route path="/" exact component={Index} />
+        <Route path="/work-history/" component={WorkHistory} />
+      </div>
+    </Router>
+  );
+}
+
+export default AppRouter;
+
+/*   <div className="App">
         <header className="App-header">About Eric Garner</header>
         <main>
           <p>
@@ -34,10 +75,19 @@ class App extends Component {
             wife and 2 dogs. I'm a novice fly fisherman and like to spend any
             other free time reading or attempting to hone my woodworking skills.
           </p>
+
+
+
+          
         </main>
       </div>
+
+
+
     );
   }
 }
 
 export default App;
+
+*/

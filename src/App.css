@@ -1,24 +1,6 @@
-
-
-
-
-.App-header {
-  background-color: dodgerblue;
-  min-height: 25vh;
+header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(20px + 2vmin);
-  color: white;
+  flex-direction: row;
+  width: 100vw;
+  height: 10vh;
 }
-
-
-
-main {
-  display:flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-}
-
